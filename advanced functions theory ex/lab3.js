@@ -1,18 +1,20 @@
 let criteriaMap = {
   'gender': 'Female',
-  'last_name': 'Johnson'
+  'last_name': 'Johnson',
+  'all': 'all'
 }
 
 function filterEmployees(data, criteria) {
   let isItFemale = a => a.gender === "Female" ? true : false;
   let isThisTheName = (a, lName) => a.last_name === `${criteria.split('-')[1]}` ? true : false;
-  let genderFilter;
-  let lNameFilter;
   if (criteria.split('-')[1] === criteriaMap.gender) {
     return genderFilter = (data.filter(isItFemale).map(x => display(x)));
   }
   if (criteria.split('-')[1] === criteriaMap.last_name) {
     return lNameFilter = (data.filter(isThisTheName).map(x => display(x)));
+  }
+  if (criteria === criteriaMap.all) {
+    return all = (data.map(x => display(x)));
   }
 }
 function display(inputObj) {
@@ -68,4 +70,4 @@ let data = JSON.parse(`[{
     "email": "ev2@hostgator.com",
     "gender": "Male"
   }]`)
-console.log(filterEmployees(data, 'last_name-Johnson'));
+console.log(filterEmployees(data, 'all'));

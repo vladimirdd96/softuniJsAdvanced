@@ -1,4 +1,4 @@
-function functionalSum(...a) {
+function functionalSum(...params) {
     return function (b) {
         return a + b;
     };
