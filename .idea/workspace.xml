@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a579ec2-135a-4e68-b798-88296960b048" name="Default Changelist" comment="dom, lab 1 and lab 2" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hBJ2f8z5ygW5wQhpZ3t063QRNh" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="ts.external.directory.path" value="E:\Program files\WebStorm 2020.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\softuni\softuniJsAdvanced\DOM theory ex\article list" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a579ec2-135a-4e68-b798-88296960b048" name="Default Changelist" comment="" />
+      <created>1599478345343</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599478345343</updated>
+      <workItem from="1599478347167" duration="423000" />
+      <workItem from="1599478800566" duration="509000" />
+      <workItem from="1599479332517" duration="13540000" />
+    </task>
+    <task id="LOCAL-00001" summary="dom, lab 1 and lab 2">
+      <created>1599498153214</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599498153214</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+    <option name="exactExcludedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/objects theory ex/index.js" />
+        <option value="$PROJECT_DIR$/advanced functions theory ex/index.js" />
+        <option value="$PROJECT_DIR$/functions theory ex/index.js" />
+        <option value="$PROJECT_DIR$/advanced functions ex/index.js" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dom, lab 1 and lab 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="dom, lab 1 and lab 2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="136" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599493213156">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="136" y="41" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1599493213156" />
+    <state x="467" y="77" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1599492989925">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="467" y="77" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog/0.0.1366.768@0.0.1366.768" timestamp="1599492989925" />
+    <state x="465" y="140" key="FileChooserDialogImpl" timestamp="1599478698797">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="465" y="140" key="FileChooserDialogImpl/0.0.1366.768@0.0.1366.768" timestamp="1599478698797" />
+    <state x="186" y="30" key="SettingsEditor" timestamp="1599493168199">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="186" y="30" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1599493168199" />
+    <state x="274" y="119" key="Vcs.Push.Dialog.v2" timestamp="1599498163559">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="274" y="119" key="Vcs.Push.Dialog.v2/0.0.1366.768@0.0.1366.768" timestamp="1599498163559" />
+    <state x="499" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599491098072">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="499" y="300" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1366.768@0.0.1366.768" timestamp="1599491098072" />
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1599498004204">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="346" y="89" width="672" height="678" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1599498004204" />
+  </component>
+</project>
