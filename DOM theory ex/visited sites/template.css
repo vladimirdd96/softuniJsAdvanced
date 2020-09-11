@@ -12,6 +12,10 @@ body {
   background: #2d2d2d;
 }
 
+* {
+  pointer-events: none;
+}
+
 .wrapper {
   display: table;
   height: 100%;
@@ -54,6 +58,10 @@ p {
 [class^="link-"] {
   display: inline-block;
   margin: 2em;
+}
+
+[class^="link-"] a {
+  pointer-events: all;
 }
 
 /* linkone */
