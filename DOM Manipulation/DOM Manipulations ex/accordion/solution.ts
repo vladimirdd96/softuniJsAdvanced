@@ -4,7 +4,7 @@ function main() {
 
     function accordion() {
         if (btnMore.textContent === 'More') {
-            txt.style.display = 'inline-block'
+            txt.style.display = 'block'
             btnMore.textContent = 'Less'
         } else {
             txt.style.display = 'none'
