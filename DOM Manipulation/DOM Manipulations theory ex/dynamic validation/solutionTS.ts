@@ -1,15 +1,15 @@
-function main() {
-    const inputBox = document.getElementById('email')
+function main(): void {
+    const inputBox = <HTMLInputElement>document.getElementById('email')
 
-    function addSyle(e) {
+    function addSyle(e): void {
         e.classList.add('error')
     }
 
-    function removeSyle(e) {
+    function removeSyle(e): void {
         e.classList.remove('error')
     }
 
-    function validate() {
+    function validate(): void {
         if (
             inputBox.value.match(/@/gi) === null ||
             inputBox.value.match(/\./gi) === null
@@ -22,4 +22,4 @@ function main() {
 
     inputBox.addEventListener("blur", validate, true)
 }
-const onPageLoad = document.addEventListener('DOMContentLoaded', main())
+main()
