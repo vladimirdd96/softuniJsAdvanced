@@ -6,9 +6,8 @@ function main() {
         notification.style.display = 'block'
         notification.textContent = str
 
-        setTimeout(e => {
-            e = notification
-            e.style.display = 'none'
+        setTimeout(() => {
+            notification.style.display = 'none'
         }, 3000)
     }
 

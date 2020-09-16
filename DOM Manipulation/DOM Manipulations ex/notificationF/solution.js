@@ -4,9 +4,8 @@ function main() {
     function notify(str) {
         notification.style.display = 'block';
         notification.textContent = str;
-        setTimeout(e => {
-            e = notification;
-            e.style.display = 'none';
+        setTimeout(() => {
+            notification.style.display = 'none';
         }, 3000);
     }
     btnGetNotified.addEventListener('click', () => notify('Something happened!'));
