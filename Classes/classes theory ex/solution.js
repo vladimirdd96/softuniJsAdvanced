@@ -70,6 +70,7 @@ class DomTr extends DomElement {
         super('tr', content)
     }
 }
+
 class DomTd extends DomElement {
     constructor(content) {
         super('td', content)
@@ -78,6 +79,38 @@ class DomTd extends DomElement {
 class DomTh extends DomElement {
     constructor(content) {
         super('th', content)
+    }
+}
+class DomUl extends DomElement {
+    constructor(content) {
+        super('ul', content
+            .reduce(
+                (aggregate, element) =>
+                    [...aggregate, Object.values(element).join(" ")],
+                []
+            )
+            .map(x => new DomLi(x))
+        )
+    }
+}
+class DomLi extends DomElement {
+    constructor(content) {
+        super('li', content)
+    }
+}
+
+class DomImg extends DomElement {
+    src
+    constructor(src) {
+        super("img", "")
+        this.src = src
+    }
+
+    render() {
+        const img = this.generateDomElement();
+        img.src = this.src
+
+        return img
     }
 }
 
@@ -104,11 +137,16 @@ class Grid {
     data = []
     wrapper
     elements
+    cellTemplates = {
+        avatar: "img",
+        friends: "ul"
+    }
+
     constructor(data, elements, wrapper) {
         this.data = data;
         this.wrapper = wrapper;
         this.elements = elements;
-        this.keys = Object.keys(this.data[0]).filter(x => x !== "friends")
+        this.keys = Object.keys(this.data[0])
     }
 
     render() {
@@ -136,9 +174,15 @@ class Grid {
     buildBody() {
         return this.elements.create("tbody",
             this.data.map(row => this.buildTr(
-                this.keys.map(cell => this.buildCell("td", row[cell]))
+                this.keys.map(cell => this.buildCell(
+                    "td", this.buildCellBody(cell, row[cell]
+                    )
+                ))
             ))
         )
+    }
+    buildCellBody(type, content) {
+        return this.elements.create(this.cellTemplates[type], content) || content
     }
     buildTr(x) {
         return this.elements.create("tr", x)
@@ -162,6 +206,9 @@ class Main {
         DomElementsFactory.register("tr", DomTr)
         DomElementsFactory.register("th", DomTh)
         DomElementsFactory.register("td", DomTd)
+        DomElementsFactory.register("img", DomImg)
+        DomElementsFactory.register("li", DomLi)
+        DomElementsFactory.register("ul", DomUl)
 
         console.log(
             new Grid(
