@@ -114,6 +114,32 @@ class DomImg extends DomElement {
     }
 }
 
+class DomA extends DomElement {
+    href
+    props
+    constructor(content, href, props) {
+        super("a", content)
+        this.href = href
+        this.props = props
+    }
+
+    render() {
+        const a = super.render()
+        a.href = this.href
+        if (this.props) {
+            let prps = Object.entries(this.props)[0]
+            a.dataset[prps[0]] = prps[1]
+        }
+        return a
+    }
+}
+
+class MailLink extends DomA {
+    constructor(content) {
+        super(content, `mailto:${content}`)
+    }
+}
+
 class GenericFactory {
     _registry = new Map()
 
@@ -135,21 +161,52 @@ class GenericFactory {
 class Grid {
     keys = []
     data = []
+    dict
     wrapper
     elements
+    headTemplates = {
+        first_name: "a",
+    }
     cellTemplates = {
         avatar: "img",
-        friends: "ul"
+        friends: "ul",
+        email: "mail"
     }
 
-    constructor(data, elements, wrapper) {
+    constructor(data, elements, dict, wrapper) {
         this.data = data;
+        this.dict = dict;
         this.wrapper = wrapper;
         this.elements = elements;
         this.keys = Object.keys(this.data[0])
+
+        this.wrapper.addEventListener('click', this)
+    }
+
+    handleEvent(e) {
+        if (e.target.dataset.sortBy) {
+            this.sortBy(e.target.dataset.sortBy)
+            this.render()
+        }
+    }
+
+    sortBy(prop) {
+        this.data = this.data.sort((a, b) => {
+            if (!isNaN(Number(a[prop]))) {
+                return Number(a[prop]) - Number(b[prop]);
+            }
+            return a[prop].localeCompare(b[prop]);
+        })
+    }
+
+    cleanHTML() {
+        while (this.wrapper.firstElementChild !== null) {
+            this.wrapper.removeChild(this.wrapper.firstElementChild);
+        }
     }
 
     render() {
+        this.cleanHTML()
         return this.wrapper.appendChild(
             this.buildTable(this.buildContent()).render()
         )
@@ -167,7 +224,7 @@ class Grid {
     buildHead() {
         return this.elements.create("thead",
             this.buildTr(
-                this.buildCells(this.keys, "th")
+                this.buildHeadCells(this.keys, "th")
             )
         )
     }
@@ -190,8 +247,19 @@ class Grid {
     buildCell(type, x) {
         return this.elements.create(type, x)
     }
-    buildCells(arr, type, x) {
+    buildCells(arr, type) {
         return arr.map(x => this.buildCell(type, x))
+    }
+
+    buildHeadLink(key, x) {
+        return this.elements.create("a", x, "javascript:;", { sortBy: key })
+    }
+
+    buildHeadCell(type, x) {
+        return this.elements.create(type, this.buildHeadLink(x, this.dict[x] || x))
+    }
+    buildHeadCells(arr, type, x) {
+        return arr.map(x => this.buildHeadCell(type, x))
     }
 }
 
@@ -209,11 +277,23 @@ class Main {
         DomElementsFactory.register("img", DomImg)
         DomElementsFactory.register("li", DomLi)
         DomElementsFactory.register("ul", DomUl)
+        DomElementsFactory.register("a", DomA)
+        DomElementsFactory.register("mail", MailLink)
 
         console.log(
             new Grid(
                 MOCK.slice(0, 10),
                 DomElementsFactory,
+                {
+                    id: "Идент.",
+                    email: "Мейл",
+                    gender: "Пол",
+                    ip_address: "IP",
+                    first_name: "Име",
+                    avatar: "Картинка",
+                    friends: "Приятел",
+                    last_name: "Фамилия",
+                },
                 document.all.app
             ).render()
         );
