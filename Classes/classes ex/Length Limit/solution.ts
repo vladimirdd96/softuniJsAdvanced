@@ -2,17 +2,18 @@ class Stringer {
     innerString: string
     innerLength: number
 
-    constructor(innerString: string, innerLength: number) {
-        this.innerString = innerString
-        this.innerLength = innerLength
+    constructor(string: string, length: number) {
+        this.innerString = string
+        this.innerLength = +length
     }
 
     decrease(length: number) {
-        if (length > this.innerLength) {
-            this.innerLength = 0
-        } else {
-            this.innerLength -= length
-        }
+        // if (length > this.innerLength) {
+        //     this.innerLength = 0
+        // } else {
+        //     // this.innerLength -= length
+        // }
+        this.innerLength = Math.max(0, this.innerLength - length)
     }
 
     increase(length: number) {
@@ -41,3 +42,6 @@ console.log(test.toString()); // ...
 
 test.increase(4);
 console.log(test.toString()); // Test
+
+test.decrease(1);
+console.log(test.toString()); // ...
